@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    build: .
+    volumes:
+      - ./app:/app
+      - ./output:/app/output
+    environment:
+      - LANG=C.UTF-8
+      - LC_ALL=C.UTF-8
+    command: ["python"]
+    
